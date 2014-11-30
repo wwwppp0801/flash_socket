@@ -370,7 +370,7 @@ JSocket.prototype = {
 };
 
 
-JSocket.init("https://www.baidu.com/nocache/zhixin/JSocket.swf", function () {
+JSocket.init("JSocket.swf", function () {
    socket = new JSocket({
        connectHandler: connectHandler,
        dataHandler:    dataHandler,
@@ -381,7 +381,7 @@ JSocket.init("https://www.baidu.com/nocache/zhixin/JSocket.swf", function () {
 });
 function connectHandler() {
     socket.writeFlush("GET / HTTP/1.0\x0D\x0A");
-    socket.write("Host: www.wangp.org\x0D\x0A\x0D\x0A");
+    socket.write("Host: wx.wangp.org\x0D\x0A\x0D\x0A");
     socket.flush();
 }
 function dataHandler(data) {
